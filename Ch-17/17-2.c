@@ -2,8 +2,17 @@
 
 int main()
 {
-    int a = getInt();
-    int b = getInt();
+    int n = getInt("array length");
 
-    sum(a, b);
+    int a[5];
+
+    for (int i = 0; i < n; i++)
+    {
+        a[i] = getArrayElement("a", i);
+    }
+
+    printArray(a, n);
+
+    printf("Average: %.2f", getArrayAvg(a, n));
+    border('-', 10);
 }
